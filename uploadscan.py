@@ -197,4 +197,4 @@ def export_results(results, output_format, filename=None):
     else:
         total = len(results)
         found = sum(1 for r in results if r['status'] == 'FOUND' or r['status'] == 'UPLOAD_SUCCESS')
-        errors = sum(1 for r in results if r['status'] not in ['FOUND', 'NOT
+        errors = sum(1 for r in results if r['status'] not in ['FOUND', 'NOT_FOUND', 'UPLOAD_SUCCESS'])
